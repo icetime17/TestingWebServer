@@ -3,7 +3,7 @@
 #!/usr/bin/python
 
 import sys
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_file
 
 app = Flask(__name__)
 
@@ -86,6 +86,18 @@ def city():
 @app.route('/html')
 def template():
 	return render_template('template.html')
+
+#image
+@app.route('/image')
+def image():
+	imageName = 'image.png'
+	return send_file(imageName, mimetype='image/png')
+
+#gif
+@app.route('/gif')
+def gif():
+	gifName = 'gif.gif'
+	return send_file(gifName, mimetype='image/gif')
 
 if __name__ == '__main__':
 	if len(sys.argv) == 1:
