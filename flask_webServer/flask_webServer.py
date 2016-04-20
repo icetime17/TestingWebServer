@@ -14,9 +14,12 @@ def index():
 		usage:
 			/name
 			/json
+			/book
 			/city
 			/html
-
+			/image
+			/gif
+			/file
 
 	'''
 
@@ -98,6 +101,13 @@ def image():
 def gif():
 	gifName = 'gif.gif'
 	return send_file(gifName, mimetype='image/gif')
+
+#file
+@app.route('/file')
+def file():
+	fileName = 'file.json'
+	return send_file(fileName, mimetype='text/json')
+
 
 if __name__ == '__main__':
 	if len(sys.argv) == 1:
