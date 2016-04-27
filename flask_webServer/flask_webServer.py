@@ -17,6 +17,7 @@ def index():
 			/book
 			/city
 			/html
+			/template/myname
 			/image
 			/gif
 			/file
@@ -87,8 +88,12 @@ def city():
 
 #template
 @app.route('/html')
-def template():
-	return render_template('template.html')
+def html():
+	return render_template('html.html')
+
+@app.route('/template/<name>')
+def template(name):
+	return render_template('template.html', name=name)
 
 #image
 @app.route('/image')
