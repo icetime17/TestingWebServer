@@ -17,6 +17,7 @@ def index():
 			/book
 			/city
 			/html
+			/temp/html1
 			/template/myname
 			/image
 			/gif
@@ -90,6 +91,10 @@ def city():
 @app.route('/html')
 def html():
 	return render_template('html.html')
+
+@app.route('/temp/<page>')
+def temp(page):
+	return render_template(page + '.html')
 
 @app.route('/template/<name>')
 def template(name):
