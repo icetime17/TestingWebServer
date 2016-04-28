@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AirBrush - Look your best!</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="AirBrush - Look your best!" >
+	<meta property="og:type" content="article" >
+	<meta property="og:description" content="AirBrush - Look your best!" >
+	<meta property="og:image" content="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/bg_en.jpg" >
+	<meta property="og:image:secure_url" content="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/bg_en.jpg" >
+	<meta property="og:url" content="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/en/" >
+	<style>
+        html { font-size: 20px; font-family: "Hiragino Sans GB", "Microsoft YaHei", "SimSun", "helvetica neue", arial, sans-serif; }
+        @media only screen and (max-width: 360px) and (min-width: 321px) { html { font-size: 22.5px; } }
+        @media only screen and (max-width: 375px) and (min-width: 361px) { html { font-size: 23.4px; } }
+        @media only screen and (max-width: 415px) and (min-width: 391px) { html { font-size: 25.9px; } }
+		html, body { height: 100%; }
+		body { margin: 0; }
+		a { background-color: transparent; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; text-decoration: none; }
+		a:active, a:hover { outline: 0; }
+		img { border: 0; vertical-align: middle; }
+		.block-center { display: block; margin: 0 auto; }
+		.text-center { text-align: center; }
+		.page { position: relative; width: 16rem; height: 28.45rem; margin: 0 auto; background-image: url("http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/bg_en.jpg"); background-size: 16rem 28.45rem; text-align: center; }
+		.mask-header { position: fixed; width: 16rem; height: 2.45rem; line-height: 2.45rem; text-align: center; background: #fff; }
+		.mask-header img { width: 4.16rem; height: 0.81067rem; }
+		.mask-header .close { position: absolute; right: 0; margin-right: 0.75rem; font-size: 1.5rem; color: #818181; }
+		.bg { position: absolute; top: 0; left: 0; width: 100%; }
+		.logo { position: absolute; top: 1.2rem; left: 4.576rem; width: 6.848rem; }
+		.footer { position: fixed; bottom: 0; width: 16rem; height: 4.625rem; background-image: url("http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/shadow.png"); background-size: 16rem 4.625rem; text-align: center; }
+		.btn-download { width: 11.98933rem; height: 2.34667rem; margin-top: 1.25rem; }
+		.wxmask {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%; background-color: #000;opacity: .8; z-index: 999;}
+		.wxmask2 {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999;}
+	</style>
+	<script>
+		;(function(win,doc){
+			var docEl = doc.documentElement,
+				refreshRemId;
+			var refreshRem = function (){
+				var w =docEl.getBoundingClientRect().width || 320;
+				var fs = w/320 * 20;
+				fs = fs>40 ? 40 : fs;
+				docEl.style.fontSize = fs+'px';
+			};
+			win.addEventListener('resize', function() {
+			clearTimeout(refreshRemId);
+			refreshRemId = setTimeout(refreshRem, 100);
+			}, false);
+			win.addEventListener('pageshow', function(e) {
+				if (e.persisted) {
+					clearTimeout(refreshRemId);
+					refreshRemId = setTimeout(refreshRem, 100);
+				}
+			}, false);
+			refreshRem();
+		})(window,document);
+	</script>
+</head>
+<body>
+	<div class="page">
+		<img class="bg" src="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/bg_en.jpg" alt="">
+		<!-- <div class="mask-header" id="mask-header">
+		    <a id="link-download-1" href="">
+		        <img src="../img/text.png" alt="AirBrush">
+		    </a>
+            <span class="close" id="close">×</span>
+		</div> -->
+        <a id="link-download-2" href="">
+            <img src="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/logo.png" class="logo">
+        </a>
+        <div class="footer">
+            <a id="link-download-3" href="">
+                <img src="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/btn-download.png" alt="" class="btn-download">
+            </a>
+        </div>
+		<div id="wxMask" class="wxmask"></div>
+		<div id="wxMask2" class="wxmask2">
+			<img src="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/android.png" id="wxGuideimg" style="display: none;" width="100%">
+			<img src="http://xiuxiu.mobile.meitudata.com/tuiguang/airbrush/download/img/ios.png" id="wxGuideimgIos" style="display: none;" width="100%">
+		</div>
+	</div>
+	<div style="display: none;">
+		<script src='https://w.cnzz.com/c.php?id=1258833406&l=3' language='JavaScript'></script>
+	</div>
+	<script>
+		;(function(win,doc){
+            function getById(id) {
+                return document.getElementById(id);
+            }
+			// judge os
+			var ua = navigator.userAgent,
+				isAndroid = /android|adr/gi.test(ua),
+				isIOS = /iphone|ipod|ipad/gi.test(ua) && !isAndroid,
+				isWinPhone = /winphone|Windows Phone/gi.test(ua) && !isAndroid,
+				isWeChat = /(MicroMessenger)/i.test(ua),
+                // linkDownload1 = getById('link-download-1'),
+                linkDownload2 = getById('link-download-2'),
+                linkDownload3 = getById('link-download-3'),
+                closeBtn = getById('close'),
+                maskHeader = getById('mask-header'),
+				wxMask = getById('wxMask'),
+				wxMask2 = getById('wxMask2'),
+				wxGuideimg = getById('wxGuideimg'),
+				wxGuideimgIos = getById('wxGuideimgIos'),
+                LINK_IOS = 'https://itunes.apple.com/app/id998411110',
+                LINK_ANDROID_CN = 'http://pkgstatic.meitumv.com/upload/package/AirBrush_1.2.2_201604011716.apk',
+				GOOGLE_PLAY = 'https://play.google.com/store/apps/details?id=com.magicv.airbrush';
+
+            // set links
+			if(isIOS) {
+                linkDownload2.href = linkDownload3.href = LINK_IOS;
+			} else if(isWinPhone) {
+				alert("Don't support winPhone!");
+			} else {
+                linkDownload2.href = linkDownload3.href = GOOGLE_PLAY;
+			}
+
+			if(isWeChat && isIOS) {
+				linkDownload3.addEventListener('click', function(event) {
+					wxMask.style.display="block";
+					wxMask2.style.display="block";
+					wxGuideimgIos.style.display="block";
+				});
+			}
+
+			var _czc = _czc || [];
+			_czc.push(["_setAccount", 1258833406]);
+
+			if(isIOS) {
+				linkDownload3.addEventListener('click', function(event) {
+					_czc.push(["_trackEvent", 'ios', '点击下载']);
+				});
+			}
+
+			if(isAndroid) {
+				linkDownload3.addEventListener('click', function(event) {
+					_czc.push(["_trackEvent", 'android', '点击下载']);
+				});
+			}
+
+		})(window,document);
+	</script>
+</body>
+</html>
