@@ -22,6 +22,7 @@ def index():
 			/image
 			/gif
 			/file
+			/snowball
 
 	'''
 
@@ -118,6 +119,11 @@ def file():
 	fileName = 'file.json'
 	return send_file(fileName, mimetype='text/json')
 
+#snowball
+@app.route('/snowball')
+def snowball():
+	fileName = 'snowball.json'
+	return send_file(fileName, mimetype='text/json')
 
 if __name__ == '__main__':
 	if len(sys.argv) == 1:
