@@ -15,6 +15,7 @@
         <button type="button" id="btn1">返回小程序1</button>
         <button type="button" id="btn2">返回小程序2</button>
         <button type="button" id="btn3">返回小程序3</button>
+        <button type="button" id="btn3">返回小程序4</button>
     </div>
     <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
@@ -36,10 +37,8 @@ $(function(){
             complete:function(){
                 console.log('complete');
             }
-
-            });
+          });
         });
-    });
 
     $('#btn2').on('click',function(s) {
         wx.miniProgram.navigateTo({
@@ -53,10 +52,8 @@ $(function(){
             complete:function(){
                 console.log('complete');
             }
-
-            });
+          });
         });
-    });
 
     $('#btn3').on('click',function(s) {
         wx.miniProgram.navigateTo({
@@ -70,10 +67,17 @@ $(function(){
             complete:function(){
                 console.log('complete');
             }
-
-            });
+          });
         });
+
+    $('#btn4').on('click',function(s) {
+      if (window.__wxjs_environment === 'miniprogram') {
+        alert("in wechatapp");
+      } else {
+        alert("not in wechatapp");
+      }
     });
+});
     </script>
 </body>
 </html>
