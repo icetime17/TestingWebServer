@@ -23,7 +23,7 @@ def index():
 			/gif
 			/file
 			/snowball
-
+			/wechatappwebview
 	'''
 
 #use <user> to receive parameter
@@ -124,6 +124,11 @@ def file():
 def snowball():
 	fileName = 'snowball.json'
 	return send_file(fileName, mimetype='text/json')
+
+@app.route('/wechatappwebview')
+def wechatappwebview():
+	return render_template('wechatappwebview.html')
+
 
 if __name__ == '__main__':
 	if len(sys.argv) == 1:
