@@ -24,7 +24,10 @@ def index():
 			/file
 			/snowball
 			/wechatappwebview
-			/asia_video
+			/audio_1
+			/audio_2
+			/video_1
+			/video_2
 	'''
 
 #use <user> to receive parameter
@@ -120,10 +123,24 @@ def file():
 	fileName = 'file.json'
 	return send_file(fileName, mimetype='text/json')
 
+#audio
+@app.route('/audio_1')
+def audio_1():
+	fileName = 'files/audio_1.mp3'
+	return send_file(fileName, mimetype='audio/mp3')
+@app.route('/audio_2')
+def audio_2():
+	fileName = 'files/audio_2.mp3'
+	return send_file(fileName, mimetype='audio/mp3')
+
 #video
-@app.route('/asia_video')
-def asia_video():
-	fileName = 'files/asia_video.mp4'
+@app.route('/video_1')
+def video_1():
+	fileName = 'files/video_1.mp4'
+	return send_file(fileName, mimetype='video/mp4')
+@app.route('/video_2')
+def video_2():
+	fileName = 'files/video_2.mp4'
 	return send_file(fileName, mimetype='video/mp4')
 
 #snowball
