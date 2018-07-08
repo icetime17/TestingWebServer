@@ -24,6 +24,7 @@ def index():
 			/file
 			/snowball
 			/wechatappwebview
+			/pdf_1
 			/audio_1
 			/audio_2
 			/video_1
@@ -122,6 +123,12 @@ def gif():
 def file():
 	fileName = 'file.json'
 	return send_file(fileName, mimetype='text/json')
+
+#pdf
+@app.route('/pdf_1')
+def pdf_1():
+	fileName = 'files/pdf_1.pdf'
+	return send_file(fileName, mimetype='application/pdf')
 
 #audio
 @app.route('/audio_1')
