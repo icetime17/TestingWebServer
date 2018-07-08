@@ -24,6 +24,7 @@ def index():
 			/file
 			/snowball
 			/wechatappwebview
+			/asia_video
 	'''
 
 #use <user> to receive parameter
@@ -104,13 +105,13 @@ def template(name):
 #image
 @app.route('/image')
 def image():
-	imageName = 'image.png'
+	imageName = 'files/image.png'
 	return send_file(imageName, mimetype='image/png')
 
 #gif
 @app.route('/gif')
 def gif():
-	gifName = 'gif.gif'
+	gifName = 'files/gif.gif'
 	return send_file(gifName, mimetype='image/gif')
 
 #file
@@ -118,6 +119,12 @@ def gif():
 def file():
 	fileName = 'file.json'
 	return send_file(fileName, mimetype='text/json')
+
+#video
+@app.route('/asia_video')
+def asia_video():
+	fileName = 'files/asia_video.mp4'
+	return send_file(fileName, mimetype='video/mp4')
 
 #snowball
 @app.route('/snowball')

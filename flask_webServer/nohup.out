@@ -1,0 +1,27 @@
+ * Serving Flask app "flask_webServer" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "flask_webServer.py", line 145, in <module>
+    app.run(host="0.0.0.0", port=port)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 943, in run
+    run_simple(host, port, self, **options)
+  File "/Library/Python/2.7/site-packages/werkzeug/serving.py", line 814, in run_simple
+    inner()
+  File "/Library/Python/2.7/site-packages/werkzeug/serving.py", line 774, in inner
+    fd=fd)
+  File "/Library/Python/2.7/site-packages/werkzeug/serving.py", line 660, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/Library/Python/2.7/site-packages/werkzeug/serving.py", line 577, in __init__
+    self.address_family), handler)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 13] Permission denied
