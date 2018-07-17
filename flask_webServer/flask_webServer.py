@@ -29,6 +29,7 @@ def index():
 			/audio_2
 			/video_1
 			/video_2
+			/tfzq
 	'''
 
 #use <user> to receive parameter
@@ -148,6 +149,10 @@ def video_1():
 @app.route('/video_2')
 def video_2():
 	fileName = 'files/video_2.mp4'
+	return send_file(fileName, mimetype='video/mp4')
+@app.route('/tfzq')
+def tfzq():
+	fileName = 'files/tfzq.mp4'
 	return send_file(fileName, mimetype='video/mp4')
 
 #snowball
