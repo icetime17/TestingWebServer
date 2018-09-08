@@ -152,7 +152,7 @@ def video_2():
 	return send_file(fileName, mimetype='video/mp4')
 @app.route('/tfzq')
 def tfzq():
-	fileName = 'files/tfzq.mp4'
+	fileName = 'files/tfzq.mov'
 	return send_file(fileName, mimetype='video/mp4')
 
 #snowball
