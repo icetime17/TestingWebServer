@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#!/usr/bin/python
+#!/usr/bin/python3.6
 
 import sys
 from flask import Flask, request, jsonify, render_template, send_file
